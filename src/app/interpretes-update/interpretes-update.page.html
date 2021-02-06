@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Atualizar Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="formGroup">
+
+  <ion-item>
+    <ion-label position="floating">Nome</ion-label>
+    <ion-input type="text" formControlName="nome"></ion-input>    
+  </ion-item>
+
+    
+   <ion-item>
+    <ion-label position="floating">CPF</ion-label>
+    <ion-input type="text" formControlName="cpf"></ion-input>    
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">CEP</ion-label>
+    <ion-input type="text" formControlName="cep" ></ion-input>    
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Telefone</ion-label>
+    <ion-input type="text" formControlName="telefone"></ion-input>    
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Estado</ion-label>
+    <ion-input type="text" formControlName="estado"></ion-input>    
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Cidade</ion-label>
+    <ion-input type="text" formControlName="cidade"></ion-input>    
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label position="floating" >E-mail</ion-label>
+    <ion-input type="text" formControlName="username" disabled="true"></ion-input>    
+  </ion-item>
+ 
+ 
+  
+
+  <ion-button (click)="atualizar()" expand="full">
+    <ion-icon name="cloud-upload-outline"></ion-icon></ion-button>
+
+  </form>
+</ion-content>

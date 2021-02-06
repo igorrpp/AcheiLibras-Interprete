@@ -1,0 +1,47 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="formGroup">
+    <ion-list lines="full" class="ion-no-margin">
+      <ion-list-header lines="full">
+
+        <img class="logo" src="assets/img/logo3.png" width="320px" height="250px" />
+        <ion-label>
+
+        </ion-label>
+      </ion-list-header>
+
+
+      <ion-item color="light">
+        <ion-icon class="user" size="large" name="person-sharp"></ion-icon>
+        <ion-input class="fundo" placeholder="Insira seu e-mail" formControlName="username"></ion-input>
+      </ion-item>
+
+      <ion-item color="light"> 
+        <ion-icon slot="end" id="view" [name]="passwordToggleIcon" (click)="togglePassword()"></ion-icon>
+
+        <ion-icon class="senha" size="large" name="lock-closed"></ion-icon>
+        <ion-input class="fundo" [type]="showPassword ? 'text' : 'password'" placeholder="********" formControlName="password"></ion-input>
+      </ion-item>
+   
+    </ion-list>
+    
+    <ion-item>
+      
+      <ion-label id="esqueceuSenha" (click)="redirecionar()">Esqueceu a senha?</ion-label>
+    </ion-item>
+
+
+    <ion-button expand="block" (click)="autenticar()">
+      Entrar
+    </ion-button>
+
+    <ion-button expand="block" size="small" (click)="redirecionar2()" color="medium">Ainda não tem Cadastro?</ion-button>
+    
+
+    <!--<ion-button expand="block"  size="small"  (click)="redirecionar2()" color="danger">Quer ser um interprete?</ion-button>
+    -->
+  </form>
+</ion-content>

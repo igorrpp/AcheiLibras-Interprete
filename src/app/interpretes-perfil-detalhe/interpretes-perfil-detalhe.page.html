@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Interpretes-detalhe</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-card id="cards">
+    <img [src]="imagem" *ngIf="imagem" (click)="foto()" />
+
+  </ion-card>
+
+  <form [formGroup]="formGroup">
+    <ion-card>
+
+
+      <ion-item>
+          <!-- Seleciona o status e salva no firebase-->
+        <ion-label>Status</ion-label>
+        <ion-select  type="text" formControlName="status" interface="action-sheet" (ionChange)="atualizar2()"  >
+          <ion-select-option value="Online">Online</ion-select-option>
+          <ion-select-option value="Offline">Offline</ion-select-option>
+          <ion-select-option value="Ocupado">Ocupado</ion-select-option>
+        </ion-select>
+       
+        <ion-badge color="warning" >{{interprete.status}}</ion-badge>
+
+
+      </ion-item>
+
+      <ion-item>
+        <ion-label>CEP: </ion-label>
+        <ion-input readonly="readonly" type="text" formControlName="cep" value="{{interprete.cep}}"> 
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>CPF: </ion-label>
+        <ion-input readonly="readonly" type="text" formControlName="cpf" value="{{interprete.cpf}}"> 
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>NOME: </ion-label>
+        <ion-input readonly="readonly" type="text" formControlName="nome" value="{{interprete.nome}}">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label id="email">E-MAIL:</ion-label>
+        <ion-input readonly="readonly" type="text" formControlName="username" value="{{interprete.username}}">
+          </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Estado:</ion-label>
+        <ion-input readonly="readonly" type="text" formControlName="estado" value="{{interprete.estado}}">
+        </ion-input>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-label>Cidade:</ion-label>
+        <ion-input readonly="readonly" type="text" formControlName="cidade" value="{{interprete.cidade}}">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Telefone:</ion-label>
+        <ion-input readonly="readonly" type="text" formControlName="telefone" value="{{interprete.telefone}}">
+        </ion-input>
+      </ion-item>
+
+
+    </ion-card>
+
+  </form>
+
+  <ion-button expand="block" (click)="atualizar(interprete)" color="primary">Atualizar
+  
+  </ion-button>
+
+</ion-content>

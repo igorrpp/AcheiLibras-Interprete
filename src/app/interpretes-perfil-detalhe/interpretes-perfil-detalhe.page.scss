@@ -1,0 +1,56 @@
+
+
+
+ion-list{
+    
+    /**font-weight: bold;**/
+    border-style: solid;
+    border-color: #212E6FFE;
+    margin-bottom: 2px;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#id{
+    margin-bottom: 2px;
+}
+
+section {
+    text-align: center;
+    align-items: center;
+    
+}
+
+ion-label{
+    font-weight: bold;
+}
+
+#contato{
+    font-size: 20px;
+    color: darkblue;
+}
+
+.buttonsContact{
+    border-style: solid;
+    border-color: #adbbff79;
+    margin-bottom: 2px;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+   
+}
+ion-content{
+    background-color: rgb(215, 255, 255);
+}
+
+#cards{
+   text-align: center;
+    border-style: solid;
+    border-color: rgba(59, 78, 78, 0.329);
+    width: 350px;
+    height: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}

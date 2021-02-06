@@ -1,0 +1,95 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Clientes-detalhe</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-card>
+    <img [src]="imagem" *ngIf="imagem" />
+
+  </ion-card>
+
+  <!-- Remover após ser implemntado "fotos"
+    <ion-button expand="block" (click)="foto()" color="success">
+      <ion-icon name="camera-outline"></ion-icon>
+    </ion-button>
+    -->
+  <form>
+    <ion-card>
+      <ion-badge color="success">{{cliente.status}}</ion-badge>
+
+
+
+      <ion-item>
+        <ion-label>CEP: </ion-label>
+        <ion-input readonly="readonly"> {{cliente.cep}} </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>NOME: </ion-label>
+        <ion-input readonly="readonly"> {{cliente.nome}} </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label id="email">E-MAIL:</ion-label>
+        <ion-input readonly="readonly"> {{cliente.username}} </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label id="telefone">TELEFONE:</ion-label>
+        <ion-input readonly="readonly"> {{cliente.telefone}} </ion-input>
+      </ion-item>
+
+
+
+      <ion-item>
+        <ion-label>Cidade:</ion-label>
+        <ion-input readonly="readonly"> {{cliente.cidade}} </ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label>Estado:</ion-label>
+        <ion-input readonly="readonly"> {{cliente.estado}} </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>DEFICIÊNCIA:</ion-label>
+        <ion-input readonly="readonly"> {{cliente.deficiencia}} </ion-input>
+      </ion-item>
+
+
+    </ion-card>
+
+
+
+
+    <!--<ion-button expand="block" (click)="excluir(cliente)" color="danger">
+  <ion-icon name="trash-outline"></ion-icon>
+</ion-button>
+<ion-button expand="block" (click)="atualizar(cliente)" color="primary">
+  <ion-icon name="clipboard-outline"></ion-icon>
+</ion-button>
+-->
+  </form>
+  <!-- Botões-->
+  <section class="buttonsContact">
+    <header id="contato">Entrar em contato</header>
+
+    <ion-button (click)="detalhe()" size="default" color="primary">
+      Agendar
+     
+    </ion-button>
+    
+    <ion-button href={{zap(url)}}  size="default" color="success">
+      <ion-icon name="logo-whatsapp"></ion-icon>
+    </ion-button>
+
+  </section>
+
+
+</ion-content>

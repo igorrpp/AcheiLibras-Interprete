@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+   <!--
+  <form>
+   <ion-searchbar animated placeholder="Buscar" (ionChange)="pesquisar()" color="light" #nome ></ion-searchbar>
+  </form>
+-->
+
+</ion-header>
+
+<ion-content>
+<ion-list>
+<ion-list-header lines="inset">
+  <ion-label class="iColor">Lista de agendamento </ion-label>
+  
+  <ion-button (click)="ionViewWillEnter()" ><ion-icon slot="start" name="refresh" ></ion-icon></ion-button>
+ 
+  
+  
+</ion-list-header>
+<ion-item id="item" lines="none" *ngFor="let i of clientes" >
+
+  
+  <ion-label (click)="detalhe(i)" id="demo" >
+    
+    <h2>Nome: {{i.nome}}</h2>
+    <h3>Data: {{i.dataAgendamento}}</h3>   
+    <h5>Observação: {{i.obsAgendamento}}</h5>   
+    <h4>Local:{{i.localAgendamento}}</h4> 
+    <p id="emailColor">Horario: {{i.horario}}</p>
+    <p id="status">Preço R$:{{i.preco}}</p>
+    <!--
+    <p id="status">IDCliente:   {{i.id}}</p>
+    <p id="emailColor">IDLogado:  {{i.idLogado}}</p>
+  -->
+   
+    
+    
+  </ion-label>
+</ion-item>
+
+
+</ion-list>
+
+
+
+</ion-content>
+

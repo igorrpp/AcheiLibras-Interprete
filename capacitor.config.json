@@ -1,0 +1,24 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "firebase-ionic",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {
+    "preferences": {
+      "GOOGLE_MAPS_ANDROID_API_KEY": "AIzaSyBFtgKj52wrwznRt4OaNZp1Z7aQeiu-auE",
+      "ScrollEnabled": "false",
+      "BackupWebStorage": "none",
+      "SplashMaintainAspectRatio": "true",
+      "FadeSplashScreenDuration": "300",
+      "SplashShowOnlyFirstTime": "false",
+      "SplashScreen": "screen",
+      "SplashScreenDelay": "3000"
+    }
+  }
+}

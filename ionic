@@ -1,0 +1,8 @@
+cordova-plugin-androidx-adapter: Processed 23 source files in 478ms
+cordova-plugin-firebasex: Preparing Firebase on Android
+Checking Java JDK and Android SDK versions
+ANDROID_SDK_ROOT=undefined (recommended setting)
+ANDROID_HOME=C:\android\sdk (DEPRECATED)
+Subproject Path: CordovaLib
+Subproject Path: app
+Deseja finalizar o arquivo em lotes (S/N)? 

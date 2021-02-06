@@ -1,0 +1,65 @@
+<ion-header>
+  
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="login"></ion-back-button>
+    </ion-buttons>
+    <ion-title>cadastrar-interprete</ion-title>
+  </ion-toolbar>
+</ion-header>
+<img class="logo" src="assets/img/logo2.png" width="1500px" height="250px" />
+<ion-content>
+  <form [formGroup]="formGroup">
+    <ion-list lines="full" class="ion-no-margin">
+      <ion-list-header lines="full">
+        <ion-label>
+         Cadastre-se
+        </ion-label>
+        
+      </ion-list-header>
+
+      <!-- Lembrar de colocar uma lista suspensa em grupos com dois grupos pré selecionado-->
+     
+
+      <ion-item>
+        <ion-label position="fixed">E-mail</ion-label>
+        <ion-input type="username" placeholder="Insira seu E-mail" formControlName="username"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="fixed"> Senha</ion-label>
+        <ion-input type="password" placeholder="Insira sua Senha" formControlName="password"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="fixed">Nome</ion-label>
+        <ion-input  type="nome" placeholder="Insira seu E-nome" formControlName="nome"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="fixed">CPF</ion-label>
+        <ion-input  type="cpf" placeholder="Tipo de cpf" formControlName="cpf"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label position="fixed">CEP</ion-label>
+        <ion-input  type="cep" placeholder="Tipo de cep" formControlName="cep"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="fixed">Estado:</ion-label>
+        <ion-input type="text" placeholder="Escreva o de sua localizacao Complemento" formControlName="estado">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="fixed">Cidade:</ion-label>
+        <ion-input type="text" placeholder="Escreva o de sua localizacao Complemento" formControlName="cidade">
+        </ion-input>
+      </ion-item>
+      
+    </ion-list>
+
+    <ion-button expand="block" (click)="cadastrarUsers()">Cadastrar</ion-button>
+  </form>
+</ion-content>

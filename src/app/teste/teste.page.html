@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>teste</ion-title>
+  </ion-toolbar>
+</ion-header>
+<!--<p>Id do cliente-detalhe</p>{{cliente.id}} 
+<p>Id do perfil logado</p> {{cliente.intLogado}}
+<ion-button (click)="agendarRed()"></ion-button>
+-->
+<ion-content>
+
+  <form [formGroup]="formGroup">
+    <ion-list lines="full" class="ion-no-margin">
+      <ion-list-header lines="full">
+        <ion-label>
+         Agendar
+        </ion-label>
+        
+      </ion-list-header>
+
+      <!-- Lembrar de colocar uma lista suspensa em grupos com dois grupos pré selecionado-->
+     
+
+      <ion-item>
+        <ion-label position="floating"></ion-label>
+      
+        <ion-datetime value="1990-02-19" placeholder="Data Agendar" displayFormat="DD/MM/YYYY"  max="2030-08-23"  formControlName="dataAgendamento"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="fixed"> Observação</ion-label>
+        <ion-input type="text" placeholder="ex: seja pontual" formControlName="obsAgendamento"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="fixed">Localização</ion-label>
+        <ion-input  type="text" placeholder="Localização" formControlName="localAgendamento"></ion-input>
+      </ion-item>
+
+      <!-- Gravar o id da pessoa logada
+      <ion-item>
+        <ion-label position="fixed">idLogado</ion-label>
+        <ion-input  type="text" placeholder="{{cliente.intLogado}}" value="{{cliente.intLogado}}" formControlName="intLogado"></ion-input>
+      </ion-item>
+ -->
+      <!-- Gravar o id do agendamento 
+      <ion-item>
+        <ion-label position="fixed">IDCliente</ion-label>
+        <ion-input  type="text" placeholder="{{cliente.id}}" value="{{cliente.id}}" formControlName="idInterprete"></ion-input>
+      </ion-item>
+-->
+
+    </ion-list>
+    <ion-button (click)="cadAgendamento()"> Salvar </ion-button>
+  </form>
+
+</ion-content>

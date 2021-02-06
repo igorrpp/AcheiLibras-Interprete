@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+  
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+        </ion-buttons>
+   
+    <ion-title>Interprete -foto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <img *ngIf="foto" [src]="foto">
+  <ion-item  *ngIf="foto">
+    
+    <ion-button (click)="enviarFoto()">Enviar</ion-button>
+  </ion-item>
+  
+<!-- Botão para selecionar foto/tirar foto versão 1.0
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button (click)="tirarFoto()">
+      <ion-icon name="camera"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+    <ion-fab vertical="bottom" horizontal="left" slot="fixed">
+      <ion-fab-button (click)="obterFoto()">
+        <ion-icon name="book"></ion-icon>
+      </ion-fab-button>
+
+  </ion-fab>
+-->
+
+
+<ion-fab horizontal="center" vertical="center" slot="fixed">
+  <ion-fab-button color="light">
+    <ion-icon name="share"></ion-icon>
+  </ion-fab-button>
+
+
+
+  <ion-fab-list side="end">
+    <ion-fab-button color="dark" (click)="tirarFoto()">
+      <ion-icon name="camera"></ion-icon>
+    </ion-fab-button>
+  </ion-fab-list>
+
+
+
+  <ion-fab-list side="start">
+    <ion-fab-button color="light" (click)="obterFoto()">
+      <ion-icon name="book"></ion-icon>
+    </ion-fab-button > 
+  </ion-fab-list>
+</ion-fab>
+
+</ion-content>

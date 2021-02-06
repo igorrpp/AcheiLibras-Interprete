@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+<!--<p>Id do cliente-detalhe</p>{{cliente.id}} 
+<p>Id do perfil logado</p> {{cliente.intLogado}}
+<ion-button (click)="agendarRed()"></ion-button>
+-->
+<ion-content>
+
+  <form [formGroup]="formGroup">
+    <ion-list lines="full" class="ion-no-margin">
+      <ion-list-header lines="full">
+        <ion-label >  Agendamento </ion-label>
+
+      </ion-list-header>
+
+      <!-- Lembrar de colocar uma lista suspensa em grupos com dois grupos pré selecionado-->
+
+
+
+
+      <ion-item>
+        <ion-label position="floating"> Data</ion-label>
+        <ion-input type="text" placeholder="25/03/2021" formControlName="dataAgendamento"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Horário</ion-label>
+        <ion-input type="text" placeholder="Informe o Horário" formControlName="horario"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Preço</ion-label>
+        <ion-input type="text" placeholder="Ex: 250,00" formControlName="preco"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Observação</ion-label>
+        <ion-input type="text" placeholder="ex: seja pontual" formControlName="obsAgendamento"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Localização</ion-label>
+        <ion-input type="text" placeholder="Localização" formControlName="localAgendamento"></ion-input>
+      </ion-item>
+
+
+
+
+      <!-- Gravar o id da pessoa logada
+      <ion-item>
+        <ion-label position="fixed">idLogado</ion-label>
+        <ion-input  type="text" placeholder="{{cliente.intLogado}}" value="{{cliente.intLogado}}" formControlName="intLogado"></ion-input>
+      </ion-item>
+ -->
+      <!-- Gravar o id do agendamento 
+      <ion-item>
+        <ion-label position="fixed">IDCliente</ion-label>
+        <ion-input  type="text" placeholder="{{cliente.id}}" value="{{cliente.id}}" formControlName="idInterprete"></ion-input>
+      </ion-item>
+-->
+
+    </ion-list>
+    <ion-button (click)="cadAgendamento()" size="block"> Salvar </ion-button>
+  </form>
+
+</ion-content>
