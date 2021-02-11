@@ -54,9 +54,10 @@ export class ClientesDetalhePage implements OnInit {
         'assets/img/user.png';
     })
   }
-  zap(url) {
+  zap() {
+    var teste
     this.whatsappnumber = this.cliente.telefone;
-    return url = "https://wa.me/" + this.codigopais + this.whatsappnumber + this.mensagem;
+    return teste = "https://wa.me/" + this.codigopais + this.whatsappnumber + this.mensagem;
   }
 
   chat(obj: Cliente) {

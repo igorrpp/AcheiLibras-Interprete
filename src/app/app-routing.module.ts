@@ -72,11 +72,15 @@ const routes: Routes = [
   {
     path: 'sobre',
     loadChildren: () => import('./sobre/sobre.module').then(m => m.SobrePageModule)
+    , canActivate: [AngularFireAuthGuard],
+    data: { àuthGuardPipe: redirectToLogin }
   },
+  
   {
     path: 'splash',
     loadChildren: () => import('./splash/splash.module').then(m => m.SplashPageModule)
   },
+  
  
   {
     path: 'solicitacao-agendamento/:id',

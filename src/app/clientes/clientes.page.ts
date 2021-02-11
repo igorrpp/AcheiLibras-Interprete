@@ -1,3 +1,4 @@
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/storage';
 import { NavController } from '@ionic/angular';
@@ -29,10 +30,12 @@ export class ClientesPage implements OnInit {
     private template: TemplateService,
     private navCtrl: NavController,
     private fireStorage: AngularFireStorage,) {
+    
 
   }
 
   ngOnInit() {
+
 
   }
 
@@ -42,18 +45,19 @@ export class ClientesPage implements OnInit {
 
     this.template.loading.then(load => {
       load.present();
-
+ 
       this.clienteServ.listar().subscribe(data => {
 
 
         data.map(i => {
-
+         
           let cliente: Cliente = i.payload.doc.data() as Cliente;
 
           cliente.id = i.payload.doc.id as string;
+        
           let ref = this.fireStorage.storage.ref().child(`/clientes-foto/${i.payload.doc.id}.jpg`);
           ref.getDownloadURL().then(url => {
-
+           
 
             cliente.imagem = url;
           }, err => {
@@ -97,6 +101,9 @@ export class ClientesPage implements OnInit {
     });
   }
   teste() {
+
+    
+    
     if (document.getElementById("demo").innerHTML == 'Online') {
       document.getElementById("demo").style.color = "Blue";
 
@@ -106,7 +113,7 @@ export class ClientesPage implements OnInit {
     } else {
       (document.getElementById("demo").style.color = "red")
     }
-
+    
   }
 
   pesquisarEstado() {

@@ -61,6 +61,16 @@ export class ClienteService {
             let cliente: Cliente = new Cliente();
             cliente.setData(obj.data());// obj.payload.doc.data() -> Dados do cliente
             cliente.id = obj.id; // inserindo ID
+            
+             // Aqui irá recarregar as fotos, a cada pesquisa
+            let ref = this.fireStorage.storage.ref().child(`/clientes-foto/${ obj.id}.jpg`);
+            ref.getDownloadURL().then(url => {
+             
+  
+              cliente.imagem = url;
+            }, err => {
+              cliente.imagem = 'assets/img/user.png';
+            })
             lista.push(cliente); // adicionando o cliente na lista // push é adicionar
           });
           observe.next(lista);
@@ -100,6 +110,17 @@ export class ClienteService {
             let cliente: Cliente = new Cliente();
             cliente.setData(obj.data());// obj.payload.doc.data() -> Dados do interprete
             cliente.id = obj.id; // inserindo ID
+
+             // Aqui irá recarregar as fotos, a cada pesquisa
+            let ref = this.fireStorage.storage.ref().child(`/clientes-foto/${ obj.id}.jpg`);
+            ref.getDownloadURL().then(url => {
+             
+  
+              cliente.imagem = url;
+            }, err => {
+              cliente.imagem = 'assets/img/user.png';
+            })
+
             lista.push(cliente); // adicionando o interprete na lista // push é adicionar
           });
           observe.next(lista);

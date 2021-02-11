@@ -43,16 +43,17 @@ export class RecuperarSenhaPage implements OnInit {
       var emailAddress = this.formGroup.controls['username'].value;
       email.sendPasswordResetEmail(emailAddress).then(() =>{
      
-        this.template.myAlert("Enviado com sucesso!")
+        this.template.myAlert("Enviado com sucesso! Verificar email!")
         load.dismiss();
       }).catch( () =>{
         load.present();
         this.template.myAlert("Email Inválido, verificar email!");
-        load.dismiss();
+        
        
        
 
       })
+      load.dismiss();
     })
 
 
